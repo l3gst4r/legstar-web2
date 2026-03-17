@@ -2,16 +2,31 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Contacto - LEGSTAR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGSTAR | Contacto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <a href="index.html">Inicio</a>
-        <a href="productos.html">Productos</a>
-        <a href="contacto.html">Contacto</a>
+        <a href="index.html">INICIO</a>
+        <a href="productos.html">PRODUCTOS</a>
+        <a href="contacto.html">CONTACTO</a>
     </nav>
 
-    <h1>Contáctanos</h1>
-    <p>Puedes enviarnos un correo a: contacto@legstar.com</p>
+    <main class="contenedor-contacto">
+        <h2 class="titulo-amarillo">¿TIENES DUDAS?</h2>
+        <p>Escríbenos y nuestro equipo te contactará a la brevedad.</p>
+        
+        <form class="formulario">
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <textarea placeholder="Tu mensaje..." rows="5"></textarea>
+            <button type="submit" class="boton-accion">ENVIAR MENSAJE</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 LEGSTAR - ATENCIÓN AL CLIENTE</p>
+    </footer>
 </body>
 </html>
