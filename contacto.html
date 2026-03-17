@@ -6,34 +6,30 @@
     <title>LEGSTAR | Contacto</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-black text-white">
-
-    <nav class="p-5 border-b border-zinc-800 flex justify-between items-center sticky top-0 bg-black z-50">
-        <a href="index.html" class="flex items-center gap-3">
-            <img src="images/logo.png" alt="LOGO" class="h-12 w-auto">
-            <h1 class="text-3xl font-black text-yellow-400">LEGSTAR</h1>
-        </a>
-        <div class="space-x-8 uppercase text-sm font-bold">
-            <a href="index.html" class="hover:text-yellow-400 transition">Inicio</a>
-            <a href="productos.html" class="hover:text-yellow-400 transition">Productos</a>
-            <a href="contacto.html" class="hover:text-yellow-400 transition text-yellow-400">Contacto</a>
+<body class="bg-[#0a0a0a] text-white flex flex-col min-h-screen">
+    <nav class="p-6 flex justify-between items-center bg-black border-b border-zinc-800">
+        <div class="flex items-center gap-2">
+            <img src="images/logo.png" alt="logo" class="h-8">
+            <span class="text-2xl font-black text-[#ffcc00] tracking-tighter">LEGSTAR</span>
+        </div>
+        <div class="flex gap-8 text-xs font-bold tracking-widest">
+            <a href="index.html" class="hover:text-[#ffcc00]">INICIO</a>
+            <a href="productos.html" class="hover:text-[#ffcc00]">PRODUCTOS</a>
+            <a href="contacto.html" class="text-[#ffcc00]">CONTACTO</a>
         </div>
     </nav>
 
-    <div class="container mx-auto py-20 px-4 text-center">
-        <h2 class="text-5xl font-black mb-10 uppercase italic">¿HABLAMOS?</h2>
-        <p class="text-gray-400 mb-12 text-xl max-w-2xl mx-auto">
-            No tenemos tienda física, pero estamos a un mensaje de distancia para resolver cualquier duda.
-        </p>
-
-        <a href="https://wa.me/TuNumeroAqui" class="inline-block bg-yellow-400 text-black font-black py-6 px-12 rounded-full text-xl hover:bg-white transition uppercase tracking-widest">
+    <main class="flex-grow flex flex-col items-center justify-center text-center px-6">
+        <h2 class="text-6xl md:text-8xl font-black uppercase italic mb-8">¿HABLAMOS?</h2>
+        <p class="text-zinc-500 text-xl mb-12 max-w-lg">No tenemos tienda física, pero estamos a un mensaje de distancia.</p>
+        
+        <a href="https://wa.me/tu_numero" class="bg-[#ffcc00] text-black px-12 py-6 rounded-full font-black text-xl tracking-widest hover:bg-white hover:scale-105 transition transform duration-300 shadow-[0_0_30px_rgba(255,204,0,0.3)]">
             WHATSAPP DIRECTO
         </a>
-    </div>
+    </main>
 
-    <footer class="p-10 border-t border-zinc-800 text-center text-zinc-500 text-sm mt-20">
-        &copy; 2026 LEGSTAR OFFICIAL | POWERED BY TAILWIND
+    <footer class="p-10 text-center text-zinc-700 text-xs tracking-widest">
+        &copy; 2026 LEGSTAR OFFICIAL STORE
     </footer>
-
 </body>
 </html>
