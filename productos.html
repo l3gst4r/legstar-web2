@@ -4,54 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEGSTAR | Productos</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <nav>
-        <a href="index.html">INICIO</a>
-        <a href="productos.html">PRODUCTOS</a>
-        <a href="contacto.html">CONTACTO</a>
+<body class="bg-black text-white">
+    <nav class="p-5 border-b border-zinc-800 flex justify-between items-center sticky top-0 bg-black z-50">
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="images/logo.png" alt="LOGO" class="h-12 w-auto">
+            <h1 class="text-3xl font-black text-yellow-400">LEGSTAR</h1>
+        </a>
+        <div class="space-x-8 uppercase text-sm font-bold">
+            <a href="index.html" class="hover:text-yellow-400 transition">Inicio</a>
+            <a href="productos.html" class="hover:text-yellow-400 transition text-yellow-400">Productos</a>
+            <a href="contacto.html" class="hover:text-yellow-400 transition">Contacto</a>
+        </div>
     </nav>
 
-    <header class="header-chico">
-        <h1>NUESTRO CATÁLOGO</h1>
-        <p>EQUIPO DE ÉLITE PARA RESULTADOS REALES</p>
-    </header>
-
-    <main class="productos-container">
-        <div class="card">
-            <div class="img-placeholder">
-                <img src="images/producto1.jpg" alt="Producto 1">
+    <main class="container mx-auto py-16 px-4">
+        <h2 class="text-4xl font-black mb-12 border-l-8 border-yellow-400 pl-4">CATÁLOGO</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-zinc-900 border border-zinc-800 p-4 hover:border-yellow-400 transition group">
+                <div class="h-64 bg-zinc-800 mb-4 overflow-hidden">
+                     <img src="images/producto1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <h4 class="text-xl font-bold uppercase">PRODUCTO LEGSTAR A</h4>
+                <p class="text-yellow-400 font-bold text-2xl mt-4">$1,500</p>
             </div>
-            <h3>BOXER TÁCTICO PRO</h3>
-            <p>Comodidad y resistencia para el día a día.</p>
-            <div class="precio">$25.00</div>
-            <a href="#" class="btn-comprar">COMPRAR</a>
-        </div>
 
-        <div class="card">
-            <div class="img-placeholder">
-                <img src="images/producto2.jpg" alt="Producto 2">
+            <div class="bg-zinc-900 border border-zinc-800 p-4 hover:border-yellow-400 transition group">
+                <div class="h-64 bg-zinc-800 mb-4 overflow-hidden">
+                     <img src="images/producto2.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <h4 class="text-xl font-bold uppercase">PRODUCTO LEGSTAR B</h4>
+                <p class="text-yellow-400 font-bold text-2xl mt-4">$900</p>
             </div>
-            <h3>REMERA COMPRESIÓN</h3>
-            <p>Tela dry-fit de alta durabilidad.</p>
-            <div class="precio">$35.00</div>
-            <a href="#" class="btn-comprar">COMPRAR</a>
-        </div>
-
-        <div class="card">
-            <div class="img-placeholder">
-                <img src="images/producto3.jpg" alt="Producto 3">
-            </div>
-            <h3>PANTALÓN CARGO</h3>
-            <p>Múltiples bolsillos, costuras reforzadas.</p>
-            <div class="precio">$55.00</div>
-            <a href="#" class="btn-comprar">COMPRAR</a>
         </div>
     </main>
-
-    <footer>
-        <p>&copy; 2026 LEGSTAR OFFICIAL</p>
-    </footer>
 </body>
 </html>

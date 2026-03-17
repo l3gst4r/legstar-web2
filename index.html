@@ -3,32 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEGSTAR | Oficial</title>
-    <link rel="stylesheet" href="style.css">
+    <title>LEGSTAR | Inicio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <nav>
-        <a href="index.html">INICIO</a>
-        <a href="productos.html">PRODUCTOS</a>
-        <a href="contacto.html">CONTACTO</a>
+<body class="bg-black text-white">
+
+    <nav class="p-5 border-b border-zinc-800 flex justify-between items-center sticky top-0 bg-black z-50">
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="images/logo.png" alt="LOGO" class="h-12 w-auto">
+            <h1 class="text-3xl font-black text-yellow-400">LEGSTAR</h1>
+        </a>
+        <div class="space-x-8 uppercase text-sm font-bold">
+            <a href="index.html" class="hover:text-yellow-400 transition">Inicio</a>
+            <a href="productos.html" class="hover:text-yellow-400 transition">Productos</a>
+            <a href="contacto.html" class="hover:text-yellow-400 transition">Contacto</a>
+        </div>
     </nav>
 
-    <header>
-        <img src="images/logo.png" alt="LEGSTAR" class="logo-principal">
-        <h1>LEGSTAR</h1>
-        <p>EQUIPAMIENTO DE ALTO RENDIMIENTO</p>
+    <header class="h-[60vh] flex items-center justify-center bg-zinc-900 border-b text-yellow-400">
+        <div class="text-center">
+            <h2 class="text-7xl font-black italic mb-4">LEGSTAR <span class="text-white">CORE</span></h2>
+            <p class="text-gray-400 text-xl font-bold">Bienvenidos a la nueva era del estilo.</p>
+        </div>
     </header>
 
-    <main>
-        <div class="contenedor">
-            <h2 class="titulo-amarillo">DOMINA TU TERRENO</h2>
-            <p>Bienvenido a la tienda oficial. Aquí encontrarás el equipo que necesitas para llevar tu rendimiento al siguiente nivel.</p>
-            <a href="productos.html" class="boton-accion">EXPLORAR CATÁLOGO</a>
-        </div>
-    </main>
+    <section class="py-20 container mx-auto px-4 text-center">
+        <h3 class="text-4xl font-bold mb-6 uppercase">Nuestra Filosofía</h3>
+        <p class="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
+            En Legstar no solo vendemos productos, entregamos calidad garantizada con un diseño inspirado en la excelencia.
+        </p>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 LEGSTAR - POWERED BY QUALITY</p>
+    <footer class="p-10 border-t border-zinc-800 text-center text-zinc-500 text-sm">
+        &copy; 2026 LEGSTAR OFFICIAL
     </footer>
 </body>
 </html>
