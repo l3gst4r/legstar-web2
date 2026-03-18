@@ -6,7 +6,7 @@
     <title>LEGSTAR | Inicio</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-black text-white font-sans m-0 p-0 overflow-y-auto">
+<body class="bg-black text-white font-sans m-0 p-0 overflow-y-scroll">
 
     <nav class="px-6 py-6 md:px-12 md:py-8 flex flex-col md:flex-row justify-between items-center sticky top-0 bg-black z-50 w-full border-b border-zinc-900/50 gap-4 md:gap-0">
         <a href="index.html" class="flex items-center gap-4">
@@ -24,30 +24,23 @@
         
         <div id="carousel" class="absolute inset-0 w-full h-full">
             <div class="carousel-item absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out">
-                <img src="images/carrusel.jpg" class="w-full h-full object-cover opacity-40">
+                <img src="images/banner1.jpg" class="w-full h-full object-cover">
             </div>
             <div class="carousel-item absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
-                <img src="images/banner2.jpg" class="w-full h-full object-cover opacity-40">
+                <img src="images/banner2.jpg" class="w-full h-full object-cover">
             </div>
             <div class="carousel-item absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
-                <img src="images/carrusel.jpg" class="w-full h-full object-cover opacity-40">
+                <img src="images/banner3.jpg" class="w-full h-full object-cover">
             </div>
             <div class="carousel-item absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
-                <img src="images/banner4.jpg" class="w-full h-full object-cover opacity-40">
+                <img src="images/banner4.jpg" class="w-full h-full object-cover">
             </div>
             <div class="carousel-item absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
-                <img src="images/carrusel.jpg" class="w-full h-full object-cover opacity-40">
+                <img src="images/banner5.jpg" class="w-full h-full object-cover">
             </div>
             <div class="carousel-item absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
-                <img src="images/banner6.jpg" class="w-full h-full object-cover opacity-40">
+                <img src="images/banner6.jpg" class="w-full h-full object-cover">
             </div>
-        </div>
-
-        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 pointer-events-none">
-            <h2 class="text-5xl md:text-[110px] font-black italic text-yellow-400 leading-none uppercase tracking-tighter">
-                LEGSTAR <span class="text-white">CORE</span>
-            </h2>
-            <p class="text-zinc-300 text-lg md:text-2xl font-light italic mt-4">Bienvenidos a la nueva era del estilo.</p>
         </div>
 
         <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 text-white p-3 rounded-full hover:bg-yellow-400 hover:text-black transition opacity-0 group-hover:opacity-100">
@@ -70,6 +63,10 @@
             <div class="dot w-3 h-3 rounded-full bg-white/30 cursor-pointer transition" onclick="showSlide(5)"></div>
         </div>
     </header>
+
+    <footer class="p-10 border-t border-zinc-900 text-center text-zinc-700 text-xs bg-black">
+        &copy; 2026 LEGSTAR OFFICIAL
+    </footer>
 
     <script>
         let currentSlide = 0;
@@ -111,12 +108,6 @@
 
         // Iniciar puntito amarillo
         updateCarousel();
-    </script>Bienvenidos a la nueva era del estilo.</p>
-    </header>
-
-    <footer class="p-10 border-t border-zinc-900 text-center text-zinc-700 text-xs bg-black">
-        &copy; 2026 LEGSTAR OFFICIAL
-    </footer>
-
+    </script>
 </body>
 </html>
