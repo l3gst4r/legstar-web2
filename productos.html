@@ -9,16 +9,16 @@
 <body class="bg-black text-white font-sans m-0 p-0 overflow-y-auto">
 
     <nav class="px-6 py-6 md:px-12 md:py-8 flex flex-col md:flex-row justify-between items-center sticky top-0 bg-black z-50 w-full border-b border-zinc-900/50 gap-4 md:gap-0">
-    <a href="index.html" class="flex items-center gap-4">
-        <img src="images/LOGO.jpg" alt="LOGO" class="h-8 md:h-10 w-auto"> 
-        <h1 class="text-2xl md:text-3xl font-black text-yellow-400 uppercase italic tracking-tighter">LEGSTAR</h1>
-    </a>
-    <div class="flex gap-6 md:gap-10 uppercase text-[10px] md:text-[12px] font-bold tracking-[0.1em] md:tracking-[0.2em]">
-        <a href="index.html" class="text-zinc-500 hover:text-white transition">Inicio</a>
-        <a href="productos.html" class="text-yellow-400">Productos</a>
-        <a href="contacto.html" class="text-zinc-500 hover:text-white transition">Contacto</a>
-    </div>
-</nav>
+        <a href="index.html" class="flex items-center gap-4">
+            <img src="images/LOGO.jpg" alt="LOGO" class="h-8 md:h-10 w-auto"> 
+            <h1 class="text-2xl md:text-3xl font-black text-yellow-400 uppercase italic tracking-tighter">LEGSTAR</h1>
+        </a>
+        <div class="flex gap-6 md:gap-10 uppercase text-[10px] md:text-[12px] font-bold tracking-[0.1em] md:tracking-[0.2em]">
+            <a href="index.html" class="text-zinc-500 hover:text-white transition">Inicio</a>
+            <a href="productos.html" class="text-yellow-400">Productos</a>
+            <a href="contacto.html" class="text-zinc-500 hover:text-white transition">Contacto</a>
+        </div>
+    </nav>
 
     <main class="flex-grow container mx-auto py-8 md:py-12 px-4 md:px-8">
         
@@ -27,56 +27,71 @@
             <h2 class="text-2xl md:text-4xl font-black uppercase italic tracking-tighter text-white">CATÁLOGO</h2>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
+        <div class="flex flex-wrap justify-center gap-3 mb-12">
+            <button onclick="filtrar('todos', event)" class="filter-btn bg-yellow-400 text-black px-5 py-2 rounded-full font-bold uppercase text-[10px] tracking-widest transition">Todo</button>
+            <button onclick="filtrar('playeras', event)" class="filter-btn bg-zinc-900 text-white border border-zinc-800 px-5 py-2 rounded-full font-bold uppercase text-[10px] tracking-widest transition hover:border-yellow-400">Playeras</button>
+            <button onclick="filtrar('perfumes', event)" class="filter-btn bg-zinc-900 text-white border border-zinc-800 px-5 py-2 rounded-full font-bold uppercase text-[10px] tracking-widest transition hover:border-yellow-400">Perfumes</button>
+            <button onclick="filtrar('accesorios', event)" class="filter-btn bg-zinc-900 text-white border border-zinc-800 px-5 py-2 rounded-full font-bold uppercase text-[10px] tracking-widest transition hover:border-yellow-400">Accesorios</button>
+        </div>
+
+        <div id="contenedor-productos" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
             
-            <div class="bg-zinc-900 border border-zinc-800 p-2 md:p-3 hover:border-yellow-400 transition group flex flex-col">
+            <div class="producto-item accesorios bg-zinc-900 border border-zinc-800 p-2 md:p-3 hover:border-yellow-400 transition group flex flex-col">
                 <div class="h-32 md:h-48 bg-zinc-800 mb-2 md:mb-3 overflow-hidden flex items-center justify-center">
-                    <img src="images/cadena.jpg" alt="Producto A" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition">
+                    <img src="images/cadena.jpg" alt="Accesorio" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition">
                 </div>
-                <h4 class="text-xs md:text-sm font-bold uppercase tracking-tight text-white line-clamp-2 min-h-[32px] md:min-h-[40px]">PRODUCTO LEGSTAR A</h4>
-                <h4 class="text-xs md:text-sm font-bold uppercase tracking-tight text-white line-clamp-2 min-h-[32px] md:min-h-[40px]">DISPONIBLE</h4>
-                <p class="text-yellow-400 font-black text-xl md:text-2xl mt-1 md:mt-2">$1,500</p>
+                <h4 class="text-xs md:text-sm font-bold uppercase tracking-tight text-white min-h-[40px]">CADENA CUBANA SILVER</h4>
+                <p class="text-yellow-400 font-black text-xl md:text-2xl mt-1">$1,500</p>
             </div>
 
-            <div class="bg-zinc-900 border border-zinc-800 p-2 md:p-3 hover:border-yellow-400 transition group flex flex-col">
+            <div class="producto-item playeras bg-zinc-900 border border-zinc-800 p-2 md:p-3 hover:border-yellow-400 transition group flex flex-col">
                 <div class="h-32 md:h-48 bg-zinc-800 mb-2 md:mb-3 overflow-hidden flex items-center justify-center">
-                    <img src="images/cadena.jpg" alt="Producto B" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition">
+                    <img src="images/playera1.jpg" alt="Playera" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition">
                 </div>
-                <h4 class="text-xs md:text-sm font-bold uppercase tracking-tight text-white line-clamp-2 min-h-[32px] md:min-h-[40px]">PRODUCTO LEGSTAR B</h4>
-                <p class="text-yellow-400 font-black text-xl md:text-2xl mt-1 md:mt-2">$900</p>
+                <h4 class="text-xs md:text-sm font-bold uppercase tracking-tight text-white min-h-[40px]">OVERSIZE BLACK TEE</h4>
+                <p class="text-yellow-400 font-black text-xl md:text-2xl mt-1">$800</p>
             </div>
 
-            <div class="bg-zinc-900 border border-zinc-800 p-2 md:p-3 hover:border-yellow-400 transition group flex flex-col">
+            <div class="producto-item perfumes bg-zinc-900 border border-zinc-800 p-2 md:p-3 hover:border-yellow-400 transition group flex flex-col">
                 <div class="h-32 md:h-48 bg-zinc-800 mb-2 md:mb-3 overflow-hidden flex items-center justify-center">
-                    <img src="images/cadena.jpg" alt="Producto c" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition">
+                    <img src="images/perfume1.jpg" alt="Perfume" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition">
                 </div>
-                <h4 class="text-xs md:text-sm font-bold uppercase tracking-tight text-white line-clamp-2 min-h-[32px] md:min-h-[40px]">PRODUCTO LEGSTAR B</h4>
-                <p class="text-yellow-400 font-black text-xl md:text-2xl mt-1 md:mt-2">$900</p>
-            </div>
-
-            <div class="bg-zinc-900 border border-zinc-800 p-2 md:p-3 hover:border-yellow-400 transition group flex flex-col">
-                <div class="h-32 md:h-48 bg-zinc-800 mb-2 md:mb-3 overflow-hidden flex items-center justify-center">
-                    <img src="images/cadena.jpg" alt="Producto d" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition">
-                </div>
-                <h4 class="text-xs md:text-sm font-bold uppercase tracking-tight text-white line-clamp-2 min-h-[32px] md:min-h-[40px]">PRODUCTO LEGSTAR B</h4>
-                <p class="text-yellow-400 font-black text-xl md:text-2xl mt-1 md:mt-2">$900</p>
-            </div>
-
-            
-            <div class="bg-zinc-900 border border-zinc-800 p-2 md:p-3 hover:border-yellow-400 transition group flex flex-col">
-                <div class="h-32 md:h-48 bg-zinc-800 mb-2 md:mb-3 overflow-hidden flex items-center justify-center">
-                    <img src="images/cadena.jpg" alt="Producto e" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition">
-                </div>
-                <h4 class="text-xs md:text-sm font-bold uppercase tracking-tight text-white line-clamp-2 min-h-[32px] md:min-h-[40px]">PRODUCTO LEGSTAR B</h4>
-                <p class="text-yellow-400 font-black text-xl md:text-2xl mt-1 md:mt-2">$900</p>
+                <h4 class="text-xs md:text-sm font-bold uppercase tracking-tight text-white min-h-[40px]">LEGSTAR SCENT GOLD</h4>
+                <p class="text-yellow-400 font-black text-xl md:text-2xl mt-1">$2,200</p>
             </div>
 
             </div>
     </main>
 
-    <footer class="p-8 md:p-10 border-t border-zinc-900 text-center text-zinc-700 text-[10px] md:text-xs">
+    <footer class="p-8 md:p-10 border-t border-zinc-900 text-center text-zinc-700 text-[10px] md:text-xs bg-black">
         &copy; 2026 LEGSTAR OFFICIAL
     </footer>
+
+    <script>
+        function filtrar(categoria, evento) {
+            const productos = document.querySelectorAll('.producto-item');
+            const botones = document.querySelectorAll('.filter-btn');
+
+            // 1. Cambiar estilo de botones
+            botones.forEach(btn => {
+                btn.classList.remove('bg-yellow-400', 'text-black');
+                btn.classList.add('bg-zinc-900', 'text-white', 'border-zinc-800');
+            });
+            
+            // Activar botón clickeado
+            evento.currentTarget.classList.remove('bg-zinc-900', 'text-white', 'border-zinc-800');
+            evento.currentTarget.classList.add('bg-yellow-400', 'text-black');
+
+            // 2. Mostrar/Ocultar con animación simple
+            productos.forEach(prod => {
+                if (categoria === 'todos' || prod.classList.contains(categoria)) {
+                    prod.style.display = 'flex';
+                } else {
+                    prod.style.display = 'none';
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
