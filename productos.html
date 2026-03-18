@@ -99,7 +99,20 @@
                 }
             });
         }
+                // Al cargar la página, revisa si hay un filtro en la URL
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const filtro = urlParams.get('filtro');
+    
+    if (filtro) {
+        // Ejecuta la función de filtrar que ya creamos
+        filtrar(filtro, { currentTarget: document.querySelector(`button[onclick*="${filtro}"]`) });
+    }
+}
+                    
     </script>
+
+     
 
 </body>
 </html>
