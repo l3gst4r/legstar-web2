@@ -75,22 +75,22 @@
         &copy; 2026 LEGSTAR OFFICIAL
     </footer>
 
-    <script>
+   <script>
+        // ESTA ES LA FUNCIÓN QUE YA TENÍAS
         function filtrar(categoria, evento) {
             const productos = document.querySelectorAll('.producto-item');
             const botones = document.querySelectorAll('.filter-btn');
 
-            // 1. Cambiar estilo de botones
             botones.forEach(btn => {
                 btn.classList.remove('bg-yellow-400', 'text-black');
                 btn.classList.add('bg-zinc-900', 'text-white', 'border-zinc-800');
             });
             
-            // Activar botón clickeado
-            evento.currentTarget.classList.remove('bg-zinc-900', 'text-white', 'border-zinc-800');
-            evento.currentTarget.classList.add('bg-yellow-400', 'text-black');
+            if(evento) {
+                evento.currentTarget.classList.remove('bg-zinc-900', 'text-white', 'border-zinc-800');
+                evento.currentTarget.classList.add('bg-yellow-400', 'text-black');
+            }
 
-            // 2. Mostrar/Ocultar con animación simple
             productos.forEach(prod => {
                 if (categoria === 'todos' || prod.classList.contains(categoria)) {
                     prod.style.display = 'flex';
@@ -99,20 +99,21 @@
                 }
             });
         }
-                // Al cargar la página, revisa si hay un filtro en la URL
-window.onload = function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const filtro = urlParams.get('filtro');
-    
-    if (filtro) {
-        // Ejecuta la función de filtrar que ya creamos
-        filtrar(filtro, { currentTarget: document.querySelector(`button[onclick*="${filtro}"]`) });
-    }
-}
-                    
+
+        // --- ESTO ES LO NUEVO QUE DEBES PEGAR AL FINAL DEL SCRIPT ---
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const filtro = urlParams.get('filtro');
+            
+            if (filtro) {
+                // Buscamos el botón que corresponde a la categoría para que se ponga amarillo
+                const botonActivo = document.querySelector(`button[onclick*="'${filtro}'"]`);
+                filtrar(filtro, { currentTarget: botonActivo });
+            }
+        }
+        // --- AQUÍ TERMINA EL SCRIPT ---
     </script>
-
-     
-
 </body>
 </html>
+
+    
